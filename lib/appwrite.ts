@@ -14,7 +14,7 @@ client
   .setEndpoint(config.endpoint)
   .setProject(config.projectId)
   .setPlatform(config.platform);
-  
+
 export const avatar = new Avatars(client);
 export const account = new Account(client);
 
@@ -65,7 +65,7 @@ export async function logout() {
   }
 }
 
-export async function getUser() {
+export async function getCurrentUser() {
   try {
     const response = await account.get();
     if (response.$id) {
